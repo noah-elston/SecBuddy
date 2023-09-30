@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Webpage</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <h1> This is a header </h1>
+  
+  <div id="markdown-content"></div>
+
+  <script>
+    // Get the Markdown content from the #markdown-content element
+    var markdownContent = document.getElementById('markdown-content').innerHTML;
+
+    // Render the Markdown content to HTML
+    var htmlContent = marked(markdownContent);
+
+    // Set the innerHTML of the #markdown-content element to the rendered HTML
+    document.getElementById('markdown-content').innerHTML = htmlContent;
+  </script>
+  <script></script>
+</body>
+</html>
