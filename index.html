@@ -1,18 +1,24 @@
 <!DOCTYPE html>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <html>
 <head>
-    <title>My Webpage</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-
+  <title>My Webpage</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
-    <!-- Your HTML content here -->
-    
-    <input type="text" id="search" placeholder="Search...">
-    <div id="search-results"></div>
+  <h1> This is a header </h1>
+  
+  <div id="markdown-content"></div>
 
-    <!-- Link to the external JavaScript file -->
-    <script src="scripts/search.js"></script>
+  <script>
+    // Get the Markdown content from the #markdown-content element
+    var markdownContent = document.getElementById('markdown-content').innerHTML;
+
+    // Render the Markdown content to HTML
+    var htmlContent = marked(markdownContent);
+
+    // Set the innerHTML of the #markdown-content element to the rendered HTML
+    document.getElementById('markdown-content').innerHTML = htmlContent;
+  </script>
+  <script></script>
 </body>
 </html>
