@@ -1,0 +1,25 @@
+/* Dark Mode Styles */
+
+body {
+    background-color: #333; /* Dark background color */
+    color: #fff; /* Light text color */
+}
+
+#content {
+    background-color: #444; /* Slightly lighter background color for content area */
+}
+
+.content {
+    border: 1px solid #555; /* Borders for content elements */
+    padding: 10px;
+    margin: 10px;
+    background-color: #666; /* Content background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Box shadow for content elements */
+}
+
+input[type="text"] {
+    background-color: #555; /* Dark input background color */
+    color: #fff; /* Light text color for input */
+}
+
+/* Add more specific styles as needed */
