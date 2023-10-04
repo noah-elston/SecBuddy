@@ -1,24 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My Webpage</title>
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <title>My Website</title>
+    <style>
+        .content {
+            display: none;
+        }
+    </style>
 </head>
 <body>
-  <h1> This is a header </h1>
-  
-  <div id="markdown-content"></div>
+    <input type="text" id="search" onkeyup="filterContent()" placeholder="Search for content...">
+    <div id="content">
+        <div class="content" data-keywords="offensive security">Content about offensive security</div>
+        <!-- Add more content here -->
+    </div>
+    <script>
+        function filterContent() {
+            var input = document.getElementById('search');
+            var filter = input.value.toLowerCase();
+            var contents = document.getElementsByClassName('content');
 
-  <script>
-    // Get the Markdown content from the #markdown-content element
-    var markdownContent = document.getElementById('markdown-content').innerHTML;
-
-    // Render the Markdown content to HTML
-    var htmlContent = marked(markdownContent);
-
-    // Set the innerHTML of the #markdown-content element to the rendered HTML
-    document.getElementById('markdown-content').innerHTML = htmlContent;
-  </script>
-  <script></script>
+            for (var i = 0; i < contents.length; i++) {
+                var keywords = contents[i].getAttribute('data-keywords');
+                if (keywords.toLowerCase().indexOf(filter) > -1) {
+                    contents[i].style.display = '';
+                } else {
+                    contents[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
 </body>
 </html>
