@@ -2,15 +2,19 @@
 <html>
     <head>
         <title>My Website</title>
-        <link rel="stylesheet" type="text/css" href="dark-mode.css">
+        <link rel="stylesheet" type="text/css" href="src/dark-mode.css">
+        <link href="/dist/output.css" rel="stylesheet">
     </head>
     
 <body>
+    <h1 class="text-3xl font-bold underline">
+        Hello world!
+    </h1>
     <input type="text" id="search" onkeyup="filterContent()" placeholder="Search for content...">
     <div id="content">
         <div class="content" data-keywords="offensive security">Content about offensive security</div>
         <!-- Add more content here -->
-        <div class="content" data-keywords="network security">Content about network security</div>
+        <div class="content" data-keywords="recon">reconnaissance</div>
         <div class="content" data-keywords="application security">Content about application security</div>
         <div class="content" data-keywords="information security">Content about information security</div>
     </div>
